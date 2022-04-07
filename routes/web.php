@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\HomeController;
 use GuzzleHttp\Middleware;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::middleware('auth')
         Route::get('/','HomeController@index')->name('home');
 
         Route::resource('posts','PostController');
+
+        Route::resource('categories','CategoryController');
 
     });
 
