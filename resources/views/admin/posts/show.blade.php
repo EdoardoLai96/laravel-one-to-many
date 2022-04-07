@@ -5,7 +5,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-            Post #{{$post->id}}
+            {{$post->category->name}}
             </div>
             <div class="card-body">
             <h5 class="card-title">{{$post->title}}</h5>

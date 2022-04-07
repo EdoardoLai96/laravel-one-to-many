@@ -14,6 +14,7 @@
                         <th scope="col">Titolo</th>
                         <th scope="col">Contenuto</th>
                         <th scope="col">Slug</th>
+                        <th scope="col">Categoria</th>
                         <th style="text-align: center" scope="col">Azioni</th>
                       </tr>
                     </thead>
@@ -24,6 +25,7 @@
                                 <td>{{$post->title}}</td>
                                 <td>{{substr($post->content, 0, 30)}}</td>
                                 <td>{{$post->slug}}</td>
+                                <td>{{$post->category->name}}</td>
                                 <td style="text-align: center">
                                     <a class="btn btn-primary" href="{{route('admin.posts.show',$post->id)}}">
                                         <i class="fa-solid fa-eye"></i>

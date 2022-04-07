@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -17,7 +18,9 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('admin.posts.index',compact('posts'));
+        $categories = Category::all();
+
+        return view('admin.posts.index',compact('posts','categories'));
     }
 
     /**
@@ -27,8 +30,9 @@ class PostController extends Controller
      */
     public function create()
     {
+        $categories = Category::all();
         $posts = Post::all();
-        return view('admin.posts.create',compact('posts'));
+        return view('admin.posts.create',compact('categories','posts'));
 
     }
 
@@ -45,7 +49,8 @@ class PostController extends Controller
         $request->validate(
             [
             'title'=>'required',
-            'content'=>'required|min:20'
+            'content'=>'required|min:20',
+            'category_id'=>'nullable|exists:categories,id'
         ]);
 
         $slug=Str::slug($data['title']);
