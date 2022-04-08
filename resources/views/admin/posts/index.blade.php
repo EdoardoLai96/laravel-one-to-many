@@ -25,7 +25,7 @@
                                 <td>{{$post->title}}</td>
                                 <td>{{substr($post->content, 0, 30)}}</td>
                                 <td>{{$post->slug}}</td>
-                                <td>{{$post->category->name}}</td>
+                                <td>{{isset($post->category) ? $post->category->name : 'ND'}}</td>
                                 <td style="text-align: center">
                                     <a class="btn btn-primary" href="{{route('admin.posts.show',$post->id)}}">
                                         <i class="fa-solid fa-eye"></i>

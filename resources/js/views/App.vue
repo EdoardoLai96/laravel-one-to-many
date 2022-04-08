@@ -6,7 +6,7 @@
                     <div class="card-header">Sito in Manutenzione</div>
 
                     <div class="card-body">
-                        Torna a trovarci 
+                        Torna a trovarci fdd
                     </div>
                 </div>
             </div>

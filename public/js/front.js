@@ -618,7 +618,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _vm._v(
-                "\n                    Torna a trovarci\n                "
+                "\n                    Torna a trovarci fdd\n                "
               ),
             ]),
           ]),
@@ -12911,7 +12911,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/edoardo/Desktop/Laravel/laravel-auth/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/edoardo/Desktop/Laravel/laravel-one-to-many/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })
