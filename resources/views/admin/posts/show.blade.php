@@ -5,7 +5,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-            {{$post->category->name}}
+                {{isset($post->category) ? $post->category->name : 'ND'}}
             </div>
             <div class="card-body">
             <h5 class="card-title">{{$post->title}}</h5>
